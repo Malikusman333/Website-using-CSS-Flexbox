@@ -1,0 +1,572 @@
+/*Global Styles*/
+html {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#tablet {
+    display: none;
+}
+
+#mobile {
+    display: none;
+}
+
+.background {
+    position: relative;
+    top: 8.25rem;
+    margin: 0;
+    padding: 0;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../resources/images/wires.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    filter: sepia(100%) saturate(170%) brightness(70%) hue-rotate(330deg);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    position: static;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    width: 90%;
+    border: solid 3px black;
+    border-radius: 1rem;
+    height: auto;
+    background-color:  rgb(34 30 30);
+    color: rgb(244, 235, 227);
+    margin: 1.5% 5% 0;
+}
+
+h2.heading {
+    font-size: 2.25rem;
+    text-align: center;
+    text-shadow: 1.5px 1.5px black;
+    margin: 2% 0 1% 0;
+}
+
+.imagenest {
+    display: flex;
+    flex: 1 1;
+}
+
+/*Header--*/
+
+header {
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: auto;
+    max-height: 8.25rem;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.75rem 1rem 1rem;
+    background-color: rgb(71, 70, 70);
+    color: white;
+    border-bottom: 2px solid black;
+}
+
+.title {
+    margin-left: 1rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+header .links {
+    flex-grow: .6;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.title h1 {
+    color: white;
+    font-size: 3.5rem;
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+    text-shadow: 1.5px 1.5px black;
+}
+
+.title h3 {
+    font-size: 1.25rem;
+    margin-top: .75rem;
+    text-shadow: 1.5px 1.5px black;
+    text-align: center;
+}
+
+header .links li {
+    margin-right: 2rem;
+    font-size: 1.2rem;
+    flex-grow: 1;
+}
+
+header .links li a {
+    color: white;
+    text-shadow: 1.5px 1.5px black;
+    position: relative;
+    top: 1rem;
+}
+
+header .links li a:hover {
+    color: rgb(224, 180, 159);
+}
+
+header .links li a:active {
+    color: rgb(167, 118, 96);
+}
+
+.sharebar li {
+    border-radius: 5px;
+    padding: 0.25rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    max-height: 50px;
+    max-width: 50px;
+    flex-shrink: 0;
+}
+
+.sharebar img {
+    height: 100%;
+    width: 100%;
+}
+
+.sharebar img:hover {
+    filter: brightness(1.5);
+}
+
+#facebook {
+    filter: brightness(1.75);
+}
+
+#facebook:hover {
+    filter: brightness(2.5);
+}
+
+
+/*Banner*/
+
+.banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1.5% 0 .5%;
+}
+
+#bannerleft,
+#bannerright {
+    display: flex;
+    max-width: 20%;
+    max-height: 100%;
+    margin: 2%;
+    padding: 0;
+    aspect-ratio: 1/1;
+}
+
+#bannerleft img,
+#bannerright img {
+    object-fit: cover;
+    overflow: hidden;
+    opacity: 1;
+    border-radius: 100%;
+    border: solid 10px  rgb(94, 76, 63);
+    }
+
+#bannerright img {
+    opacity: .8;
+}
+
+#bannercenter {
+    display: flex;
+    flex-flow: column;
+    max-width: 40%;
+    max-height: 100%;
+    border: dotted 5px black;
+    border-radius: 1em;
+    padding: 2% 3% 3%;
+    background-color:  rgb(235 213 193);
+    flex-grow: 2;
+}
+
+#bannercenter img {
+object-fit: cover;
+object-position: 50% 40%;
+overflow: hidden;
+border-radius: 1rem;
+margin-top: 1rem;
+opacity: .8;
+}
+
+#bannercenter h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: .2rem;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    color: black;
+}
+
+
+/*Products*/
+
+.products {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.productbox {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 1%;
+}
+
+.productcontainer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin: 1%;
+    min-height: 175px;
+    min-width: 150px;
+    max-height: 275px;
+    max-width: 250px;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color:  rgb(94, 76, 63);
+    overflow: hidden;
+    padding: 1%;
+    flex: 1 1;
+}
+
+.productcontainer h3 {
+    text-align: center;
+    font-size: 1.25rem;
+    text-shadow: 1.5px 1.5px black;
+    margin-top: 2%;
+    flex: 1 1;
+}
+
+.productcontainer img {
+    flex: 1 1;
+    margin: 1%;
+    overflow: hidden;
+    border-radius: 1em;
+    border: solid 2px white;
+}
+
+#product2 img,
+#product5 img {
+    opacity: .9;
+}
+
+/*Services*/
+
+.services {
+    color: rgb(244, 235, 227);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.services img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    overflow: hidden;
+    border: solid 2px black;
+    border-radius: 100%;
+    opacity: 1;
+    max-width: 18%;
+    max-height: 100%;
+    margin: 2%;
+    padding: 0;
+    aspect-ratio: 1/1;
+}
+
+#servicestext {
+    margin: 2%;
+}
+
+.services h2 {
+    font-size: 3rem;
+    margin-bottom: .75rem;
+}
+
+.services h3 {
+    font-size: 2rem;
+}
+
+.services a {
+    display: flex;
+    font-size: 2.8rem;
+    font-weight: 500;
+    background-color:  rgb(235 213 193);
+    border: outset 5px rgb(150, 143, 143);
+    border-radius: .25em;
+    padding: .5em;
+    text-align: center;
+    margin: 2%;
+}
+
+.services a:hover {
+    background-color:  rgb(153, 138, 123);
+}
+
+.services a:active {
+    background-color:  rgb(153, 138, 123);
+    border: inset 5px rgb(150, 143, 143);
+
+}
+
+/*Team Section*/
+
+.team {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.team img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    overflow: hidden;
+    opacity: 1;
+    max-width: 19rem;
+    max-height: 19rem;
+    margin: 2%;
+    padding: 0;
+    aspect-ratio: 1/1;
+    border-radius: 1rem;
+    border: solid 1px black;
+}
+
+.teambox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamcontainer {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    margin: 1%;
+    width: auto;
+    height: auto;
+    max-width: 19rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    background-color:  rgb(94, 76, 63);
+    overflow: hidden;
+    padding: 1%;
+    flex: 1 1;
+}
+
+.teamcontainer h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    text-shadow: 1.5px 1.5px black;
+    margin-top: 1%;
+}
+
+
+/*footer*/
+footer {
+    width: 100%;
+    margin-top: 5%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p {
+    padding: 1%;
+}
+
+/*turn off flex-grow for broduct boxes on smaller screens*/
+
+@media only screen and (max-width: 1077px) {
+    .productcontainer {
+        flex-grow: 0;
+    }
+    .productbox {
+        justify-content: center;
+    }
+}
+
+/*tablet media queries*/
+
+@media only screen and (max-width: 1020px) {
+    /*Header and banner switch Tablet*/
+    #desktop {
+        display: none;
+    }
+    #bannercenter {
+        display: none;
+    }
+    .banner {
+        align-items: center;
+    }
+    #tablet {
+        
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+    }
+    .background {
+        top: 6.5rem;
+    }
+
+    /*Services shrink text*/
+    .services a {
+        font-size: 2rem;
+    }
+    .services h2 {
+        font-size: 2rem;
+    }
+    .services h3 {
+        font-size: 1.25rem;
+    }
+
+    /*footer text align*/
+    footer p {
+        text-align: center;
+    }
+
+}
+
+.bannertitle {/*Background for the banner title switch*/
+    background-color: rgb(14, 13, 12);
+    padding: 3%;
+    border-radius: 1rem;
+    border: solid 1px black;
+}
+
+@media only screen and (max-width: 768px) {
+    .background {
+        top: 5.25rem;
+    }
+    
+    .title h1 {
+        font-size: 2.5rem;
+    }
+    .title h3 {
+        font-size: 1rem;
+    }
+
+    /*Services shrink text*/
+    .services a {
+        font-size: 1.25rem;
+    }
+    .services h2 {
+        font-size: 2rem;
+        margin: 2%;
+        text-align: center;
+    }
+    .services h3 {
+        display: none;
+    }
+
+    header .links li a {
+        font-size: 1rem;
+        margin: 1%;
+    }
+
+    header .sharebar li {
+        max-height: 30px;
+        max-width: 30px;
+    }
+    header .links li a {
+        top: 0rem;
+        margin: 1%;
+}
+/*mobile media queries*/
+
+/*Hide Our in header*/
+@media only screen and (max-width: 588px) {
+    #our {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 526px) {
+    .background {
+        top: 4rem;
+    }
+    
+    #mobile {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #mobile ul {
+        display: flex;
+    }
+
+    #bannerright,
+    #bannerleft {
+        display: none;
+    }
+    .title {
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+        margin: 1%
+    }
+
+    .productcontainer h3 {
+        font-size: 1rem;
+    }
+
+    .services h2 {
+        font-size: 1.5rem;
+    }
+
+    .team h3 {
+    font-size: 1rem;
+    }
+
+    h2.heading {
+        font-size: 1.5rem;
+    }
+
+    .sharebar {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer p {
+        font-size: .5rem;
+    }
+}
+
+/*smallest screen top links*/
+@media only screen and (max-width: 515px) {
+    header .links li a {
+        font-size: .8rem;
+    }
+}
